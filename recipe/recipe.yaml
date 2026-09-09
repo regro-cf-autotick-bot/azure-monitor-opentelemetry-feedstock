@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "1.8.9"
+  version: 1.8.10
 
 package:
   name: azure-monitor-opentelemetry
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/azure-monitor-opentelemetry/azure_monitor_opentelemetry-${{ version }}.tar.gz
-  sha256: 9cda4481c52e02cb3e8e11a34d2491fb07000ed32ee655d75de0747e7d24fea7
+  sha256: 8400df75435db66f25584bb053265b13e1f97cf42f1d1cb4851699bdec075ad2
 
 build:
   number: 0
@@ -26,18 +26,18 @@ requirements:
     - python >=${{ python_min }}
     - azure-core <2.0.0,>=1.28.0
     - azure-core-tracing-opentelemetry >=1.0.0b11,<1.1.dev0
-    - azure-monitor-opentelemetry-exporter >=1.0.0b52,<1.1.dev0
-    - opentelemetry-instrumentation-django ==0.64b0
-    - opentelemetry-instrumentation-fastapi ==0.64b0
-    - opentelemetry-instrumentation-flask ==0.64b0
-    - opentelemetry-instrumentation-logging ==0.64b0
-    - opentelemetry-instrumentation-psycopg2 ==0.64b0
-    - opentelemetry-instrumentation-requests ==0.64b0
-    - opentelemetry-instrumentation-urllib ==0.64b0
-    - opentelemetry-instrumentation-urllib3 ==0.64b0
-    - opentelemetry-resource-detector-azure >=0.1.5,<0.2.dev0
-    - opentelemetry-sdk ==1.43.0
-
+    - azure-monitor-opentelemetry-exporter >=1.0.0b57,<1.1.dev0
+    - opentelemetry-instrumentation-django >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-fastapi >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-flask >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-logging >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-psycopg2 >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-requests >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-urllib >=0.65b0,<0.66b0
+    - opentelemetry-instrumentation-urllib3 >=0.65b0,<0.66b0
+    - opentelemetry-resource-detector-azure <1.0.0,>=0.2.0
+    - opentelemetry-sdk >=1.44.0,<1.45.dev0
+    - opentelemetry-instrumentation-httpx >=0.65b0,<0.66b0
 tests:
   - python:
       imports:
@@ -47,7 +47,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   summary: Microsoft Azure Monitor Opentelemetry Distro Client Library for Python
